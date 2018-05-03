@@ -23,7 +23,7 @@ void AALeC_ISR_DREH() {
   };
   detachInterrupt(PIN_ENCODER_TRACK_1);
   detachInterrupt(PIN_ENCODER_TRACK_2);
-  val = ~GPIO_REG_READ(GPIO_IN_ADDRESS) >> 12 & 3;
+  val = ~GPIO_REG_READ(GPIO_IN_ADDRESS) >> PIN_ENCODER_TRACK_1 & 3;
   n += lambda[z][val], z = delta[z][val];
   if (z == 0)
     aalec.drehgeber_int -= ((n == 4) - (n == -4)), n = 0;
