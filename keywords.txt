@@ -1,0 +1,63 @@
+#######################################
+# Syntax Coloring Map For AALeC Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+aalec			KEYWORD1
+c_AALeC			KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init				KEYWORD2
+set_rgb_strip		KEYWORD2
+set_led				KEYWORD2
+get_led				KEYWORD2
+dim_led				KEYWORD2
+get_button			KEYWORD2
+get_rotate			KEYWORD2
+reset_rotate		KEYWORD2
+get_temp			KEYWORD2
+get_humidity		KEYWORD2
+get_analog			KEYWORD2
+print_line			KEYWORD2
+clear_display		KEYWORD2
+play				KEYWORD2
+AALeC_ISR_DREH		KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+display				KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+c_red				LITERAL1
+c_green				LITERAL1
+c_blue				LITERAL1
+c_yellow			LITERAL1
+c_white				LITERAL1
+c_off				LITERAL1
+
+t_off				LITERAL1
+t_a_1				LITERAL1
+t_a_2				LITERAL1
+
+PIN_BUTTON			LITERAL1
+PIN_TX				LITERAL1
+PIN_RGB_STRIP		LITERAL1
+PIN_RX				LITERAL1
+PIN_SDA				LITERAL1
+PIN_SDC				LITERAL1
+PIN_ENCODER_TRACK_1	LITERAL1
+PIN_ENCODER_TRACK_2	LITERAL1
+PIN_DHT11			LITERAL1
+PIN_BEEPER			LITERAL1
+PIN_LED_RESET		LITERAL1
