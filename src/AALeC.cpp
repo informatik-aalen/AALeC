@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "AALeC.h"
+#include <AALeC.h>
 #include <NeoPixelBus.h>
 #include <SimpleDHT.h>
 #include "SSD1306.h"
@@ -47,6 +47,7 @@ void c_AALeC::init() {
   pinMode(PIN_ENCODER_TRACK_1, INPUT_PULLUP);
   pinMode(PIN_ENCODER_TRACK_2, INPUT_PULLUP);
 
+  GPIO_REG_WRITE(GPIO_OUT_W1TC_ADDRESS, 0xFFFF);
   attachInterrupt(PIN_ENCODER_TRACK_1, AALeC_ISR_DREH, CHANGE);
   attachInterrupt(PIN_ENCODER_TRACK_2, AALeC_ISR_DREH, CHANGE);
 
@@ -74,6 +75,17 @@ void c_AALeC::set_rgb_strip(int led, const RgbColor & c) {
 }
 
 
+void c_AALeC::set_rgb_strip(int led, unsigned int x) {
+  uint16_t r = x % 768, g = (x + 256) % 768, b = (x + 512) % 768;
+  RgbColor c(
+    (r < 256) ? r : ((r < 512) ? 511 - r : 0),
+    (g < 256) ? g : ((g < 512) ? 511 - g : 0),
+    (b < 256) ? r : ((b < 512) ? 511 - b : 0)
+  );
+  set_rgb_strip(led, c);
+}
+
+
 void c_AALeC::set_rgb_strip(const RgbColor & c0, const RgbColor & c1, const RgbColor & c2) {
   strip->SetPixelColor(0, c0);
   strip->SetPixelColor(1, c1);
@@ -83,12 +95,12 @@ void c_AALeC::set_rgb_strip(const RgbColor & c0, const RgbColor & c1, const RgbC
 
 
 void c_AALeC::set_led(int a) {
-    digitalWrite(PIN_LED_RESET, a);
+  digitalWrite(PIN_LED_RESET, a);
 }
 
 
 int c_AALeC::get_led() {
-    return digitalRead(PIN_LED_RESET);
+  return digitalRead(PIN_LED_RESET);
 }
 
 

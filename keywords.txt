@@ -44,10 +44,19 @@ c_green				LITERAL1
 c_blue				LITERAL1
 c_yellow			LITERAL1
 c_white				LITERAL1
+c_cyan				LITERAL1
+c_purple			LITERAL1
 c_off				LITERAL1
 
 t_off				LITERAL1
+t_c_1				LITERAL1
+t_d_1				LITERAL1
+t_e_1				LITERAL1
+t_f_1				LITERAL1
+t_g_1				LITERAL1
 t_a_1				LITERAL1
+t_h_1				LITERAL1
+t_c_2				LITERAL1
 t_a_2				LITERAL1
 
 PIN_BUTTON			LITERAL1
