@@ -38,6 +38,22 @@ Verfügung, die die Programmierung stark vereinfacht.
 15  Lautsprecher \
 16  LED / Reset
 
+## Installation
+
+Laden Sie unter [https://github.com/informatik-aalen/AALeC/releases](https://github.com/informatik-aalen/AALeC/releases)
+die .ZIP Datei der aktuellen Version der Bibliothek herunter. Benutzen Sie den
+Menüpunkt **.ZIP Bibliothek hinzufügen...** unter dem Menü **Sketch** -> 
+**Bibliothek einbinden** in der Arduino IDE um die Bibliothek einzubinden.
+
+## Abhängigkeiten
+
+Diese Bibliothek hängt von den folgenden Bibliotheken ab:
+* NeoPixelBus (Autor: *Makuna*, getestet mit Version 2.2.9)
+* SimpleDHT (Autor: *Winlin*, getestet mit Version 1.06)
+* ESP8266 and ESP32 Oled Driver for SSD1306 display (Autoren: *Daniel Eichhorn*, *Fabrice Weinberg*, geteste mit Version 3.2.7) 
+
+Installieren Sie diese Bibliotheken bitte über den Bibliotheksverwalter in der Arduino IDE.
+
 ## Autoren
 
 * **Winfried Bantel** - *Idee und Codierung*
