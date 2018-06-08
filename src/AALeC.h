@@ -4,7 +4,7 @@
 #include <SimpleDHT.h>
 #include "SSD1306.h"
 
-#define PIN_BUTTON           1
+#define PIN_BUTTON           0
 #define PIN_TX               1
 #define PIN_RGB_STRIP        2
 #define PIN_RX               3
