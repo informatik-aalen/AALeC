@@ -64,14 +64,15 @@ void c_AALeC::init() {
 
 
 void c_AALeC::set_rgb_strip(int led, uint8_t r, uint8_t g, uint8_t b) {
-  strip->SetPixelColor(led, RgbColor(r, g, b));
-  strip->Show();
+  set_rgb_strip(led, RgbColor(r, g, b));
 }
 
 
 void c_AALeC::set_rgb_strip(int led, const RgbColor & c) {
-  strip->SetPixelColor(led, c);
-  strip->Show();
+    if (led >= 0 && led < 3) {
+        strip->SetPixelColor(led, c);
+        strip->Show();
+    }
 }
 
 
