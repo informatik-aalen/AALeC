@@ -37,10 +37,6 @@ c_AALeC::c_AALeC() {
 
 
 void c_AALeC::init() {
-  Serial.begin(115200);
-  delay(100);
-  Serial.println("AALeC init");
-
   pinMode(PIN_BEEPER, OUTPUT);
   pinMode(PIN_LED_RESET, OUTPUT);
   pinMode(PIN_BUTTON, INPUT_PULLUP);
@@ -50,6 +46,12 @@ void c_AALeC::init() {
   GPIO_REG_WRITE(GPIO_OUT_W1TC_ADDRESS, 0xFFFF);
   attachInterrupt(PIN_ENCODER_TRACK_1, AALeC_ISR_DREH, CHANGE);
   attachInterrupt(PIN_ENCODER_TRACK_2, AALeC_ISR_DREH, CHANGE);
+
+  Serial.begin(115200);
+  while (!Serial);
+  delay(100);
+  Serial.println("AALeC init");
+  Serial.flush();
 
   Wire.begin();
   strip = new NeoPixelBus<NeoRgbFeature, NeoEsp8266Uart800KbpsMethod>(3, PIN_RGB_STRIP);
