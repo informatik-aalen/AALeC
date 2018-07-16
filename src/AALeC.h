@@ -53,6 +53,7 @@ class c_AALeC {
 
     /* Methods for the value of the encoder */
     int get_rotate();
+    int rotate_changed();
     void reset_rotate();
 
     /* Methods for the temperature and humidity sensor */
@@ -79,7 +80,7 @@ class c_AALeC {
   private:
     void dht11_mess();
 
-    int drehgeber_int;
+    int drehgeber_int = 0, drehgeber_int_alt = 0;
     NeoPixelBus<NeoRgbFeature, NeoEsp8266Uart800KbpsMethod> * strip;
     SimpleDHT11 dht11;
     uint8_t temp_int, hum_int;
