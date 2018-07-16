@@ -125,6 +125,14 @@ int c_AALeC::get_rotate() {
 }
 
 
+int c_AALeC::rotate_changed() {
+  int rc = 0;
+  if (drehgeber_int !=drehgeber_int_alt)
+    rc = 1, drehgeber_int_alt = drehgeber_int;
+  return rc;
+}
+
+
 void c_AALeC::reset_rotate() {
   drehgeber_int = 0;
 }
