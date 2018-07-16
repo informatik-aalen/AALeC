@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 1.1.0
+* Add rotate_changed. Fixes #7.
+
 ## Version 1.0.2
 Sebastian Stigler (7):
 * Bugfix for issue #1
