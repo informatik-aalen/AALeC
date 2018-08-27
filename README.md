@@ -68,3 +68,5 @@ Das Projekt wird unter der MIT-Lizenz publiziert.
 
 Nachbau ist explizit erwünscht. Fertigung und Vertrieb der Platine sind unter
 Angabe der Hochschule Aalen erlaubt.
+
+Informationen zur Hardware finden Sie unter [https://github.com/informatik-aalen/AALeC-Hardware](https://github.com/informatik-aalen/AALeC-Hardware).
