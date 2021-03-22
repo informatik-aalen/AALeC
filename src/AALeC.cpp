@@ -57,7 +57,7 @@ void c_AALeC::init() {
   Serial.flush();
 
   Wire.begin();
-  strip = new NeoPixelBus<NeoRgbFeature, NeoEsp8266Uart800KbpsMethod>(3, PIN_RGB_STRIP);
+  strip = new NeoPixelBus<NeoRgbFeature, NeoEsp8266Uart1Ws2812xMethod>(3, PIN_RGB_STRIP);
   strip->Begin();
   strip->ClearTo(RgbColor(0, 0, 0));
   strip->Show();
