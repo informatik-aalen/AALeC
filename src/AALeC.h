@@ -81,7 +81,7 @@ class c_AALeC {
     void dht11_mess();
 
     int drehgeber_int = 0, drehgeber_int_alt = 0;
-    NeoPixelBus<NeoRgbFeature, NeoEsp8266Uart800KbpsMethod> * strip;
+    NeoPixelBus<NeoRgbFeature, NeoEsp8266Uart1Ws2812xMethod> * strip;
     SimpleDHT11 dht11;
     uint8_t temp_int, hum_int;
     uint32_t last_dht11 = -1010;
